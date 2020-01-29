@@ -53,7 +53,7 @@ server.get('/auth/google/token', tokenHandler);
 server.get('/auth/google/callback', tokenCallbackHandler);
 
 server.get('/', function (req, res) {
-    res.send('Welcome to api ghost!!!');
+    res.send('404');
 });
 var port = normalizePort(process.env.PORT || '3000');
 
