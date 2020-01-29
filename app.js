@@ -46,8 +46,8 @@ async function tokenCallbackHandler(req, res, next) {
 
 var server = restify.createServer();
 server.use(restify.plugins.queryParser());
-server.get('/api/gddirect/:gdriveid', gdriveHandler);
-server.get('/api/gddirectstreamurl/:gdriveid', gdrivestreamHandler);
+server.get('/:gdriveid', gdriveHandler);
+server.get('/dl/:gdriveid', gdrivestreamHandler);
 
 server.get('/auth/google/token', tokenHandler);
 server.get('/auth/google/callback', tokenCallbackHandler);
